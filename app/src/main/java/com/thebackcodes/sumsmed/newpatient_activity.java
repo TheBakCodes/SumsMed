@@ -105,8 +105,8 @@ int etcounter=0;
                             .setDuration(Snacky.LENGTH_SHORT)
                             .success()
                             .show();
-                    Intent intent=new Intent(newpatient_activity.this,Home_Activity.class);
-                    startActivity(intent);
+                   // Intent intent=new Intent(newpatient_activity.this,Home_Activity.class);
+                    //startActivity(intent);
                     //mBottomSheetDialog.show();
                     addpatient adp=new addpatient();
                     adp.execute(" https://rahman09.pythonanywhere.com/patient/");

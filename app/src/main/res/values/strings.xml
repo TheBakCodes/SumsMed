@@ -90,5 +90,33 @@
         "On the layout level, design your app layout to minimize opportunities for interference. "
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
+
+
     </string>
+
+
+    <!-- Strings used for json keys -->
+    <string name="ferritin">ferritin</string>
+    <string name="crp">crp</string>
+    <string name="id">id</string>
+    <string name="timestamp">timestamp</string>
+    <string name="hb">hb</string>
+    <string name="tlc">tlc</string>
+    <string name="platelet">platelet</string>
+    <string name="peak_pressure">peak_pressure</string>
+    <string name="f1o2">f1o2</string>
+    <string name="pf_ratio">pf_ratio</string>
+    <string name="peep">peep</string>
+    <string name="one_e">one_e</string>
+    <string name="ps_tv">ps_tv</string>
+    <string name="bp">bp</string>
+    <string name="norad_dose">norad_dose</string>
+    <string name="vaso">vaso</string>
+    <string name="dialysis">dialysis</string>
+    <string name="heartrate">heartrate</string>
+    <string name="resp_rate">resp_rate</string>
+    <string name="spo2">spo2</string>
+    <string name="temp">temp</string>
+    <string name="updater">updater</string>
+    <string name="status">status</string>
 </resources>

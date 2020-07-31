@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".report_activity">
+    tools:context=".SingleReportActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
@@ -77,14 +77,7 @@
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
-                    <Button
-                        android:id="@+id/btdischarge"
-                        android:layout_width="175dp"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/butonbg"
-                        android:text="Discharge"
-                        app:layout_anchor="@id/app_bar"
-                        app:layout_anchorGravity="bottom|end" />
+
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -92,5 +85,5 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_report" />
+    <include layout="@layout/content_single_record" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -22,14 +22,10 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -212,21 +208,21 @@ public class Home_Activity extends AppCompatActivity {
         GridLayoutManager gridLayoutManager1 = new GridLayoutManager(getApplicationContext(),4);
         rcvvent.setLayoutManager(gridLayoutManager1); // set LayoutManager to RecyclerView
         //  call the constructor of CustomAdapter to send the reference and data to Adapter
-        rcvvent.setAdapter(new adapter(list1,Home_Activity.this)); // set the Adapter to RecyclerView
+        rcvvent.setAdapter(new BedAdapter(list1,Home_Activity.this)); // set the Adapter to RecyclerView
 
         rcvemer=(RecyclerView)findViewById(R.id.rcvemerg);
         // set a GridLayoutManager with default vertical orientation and 2 number of columns
         GridLayoutManager gridLayoutManager2 = new GridLayoutManager(getApplicationContext(),4);
         rcvemer.setLayoutManager(gridLayoutManager2); // set LayoutManager to RecyclerView
         //  call the constructor of CustomAdapter to send the reference and data to Adapter
-        rcvemer.setAdapter(new adapter(list2,Home_Activity.this)); // set the Adapter to RecyclerView
+        rcvemer.setAdapter(new BedAdapter(list2,Home_Activity.this)); // set the Adapter to RecyclerView
 
         rcvpatie=(RecyclerView)findViewById(R.id.rcvpatient);
         // set a GridLayoutManager with default vertical orientation and 2 number of columns
         GridLayoutManager gridLayoutManager3 = new GridLayoutManager(getApplicationContext(),4);
         rcvpatie.setLayoutManager(gridLayoutManager3); // set LayoutManager to RecyclerView
         //  call the constructor of CustomAdapter to send the reference and data to Adapter
-        rcvpatie.setAdapter(new adapter(list3,Home_Activity.this)); // set the Adapter to RecyclerView
+        rcvpatie.setAdapter(new BedAdapter(list3,Home_Activity.this)); // set the Adapter to RecyclerView
     }
 
 

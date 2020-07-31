@@ -1,18 +1,23 @@
 package com.thebackcodes.sumsmed;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class adapter extends RecyclerView.Adapter<adapter.MyViewHolder> {
      String list[];
-     adapter(String lis[])
+     Context context;
+     adapter(String lis[],Context ct)
      {
          list=lis;
+         context=ct;
      }
 
     @NonNull
@@ -25,8 +30,15 @@ public class adapter extends RecyclerView.Adapter<adapter.MyViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
         holder.tvbed.setText(list[position]);
+        holder.cv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(context,report_activity.class);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -36,9 +48,11 @@ public class adapter extends RecyclerView.Adapter<adapter.MyViewHolder> {
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView tvbed;
+        CardView cv;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             tvbed=(TextView)itemView.findViewById(R.id.tvbedno);
+            cv=(CardView)itemView.findViewById(R.id.cv);
 
         }
     }

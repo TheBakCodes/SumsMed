@@ -155,8 +155,7 @@ int etcounter=0;
                         response.append(inputLine);
                     }
                     in.close();
-
-
+                    inputLine=response.toString();
                     System.out.println("Response="+response.toString());
                 } else {
                     inputLine="Error";
